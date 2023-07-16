@@ -1,38 +1,167 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-content: center;
+  height: 100vh;
+  background: #4ECDC4;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #556270, #4ECDC4);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #556270, #4ECDC4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#App {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: auto;
+  width: 500px;
+  height: 440px;
+  background-color: blue;
+  text-align: center;
+  border-radius: 45%;
   color: white;
+  background-color: rgb(46, 44, 44);
+  border: 5px solid black;
 }
 
-.App-link {
-  color: #61dafb;
+#app-title {
+  margin: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#credits {
+  font-size: 13px;
+}
+
+#controls {
+
+  display: flex;
+  flex-flow: row nowrap; 
+  justify-content: center;
+
+}
+
+.length-control{
+  margin: 5px;
+  margin: 0 10px 0;
+ 
+}
+
+.label {
+  font-size: 17px;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.controls-screen {
+  display: inline-block;
+  background-color: #595f5c;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-size: 40px;
+  color:  rgb(104, 248, 60);
+  padding: 3px;
+  font-family: 'VT323', monospace;
+  width: 40px;
+  padding: 2px;
+  margin: 5px;
+}
+
+.icons {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.icons:hover {
+  color: #32f5e8;
+  cursor: pointer;
+
+}
+
+#time-left {
+  background-color: #595f5c;
+  width: 250px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 40px;
+  color: rgb(104, 248, 60);
+  border: 3px solid black;
+  font-size: 3rem;
+  font-family: 'VT323', monospace;
+}
+
+#buttons-container {
+  margin: 5px;
+
+}
+
+.buttons {
+  font-size: 35px;
+  margin: 5px;
+}
+.buttons:hover {
+  color: #32f5e8;
+  cursor: pointer;
+}
+
+span {
+  border-radius: 20px;
+}
+
+/* Responsive design */
+
+@media screen and (max-width: 420px){
+  #App {
+    width: auto;
+    height: auto;
+    border-radius: 120px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  #app-title {
+    margin: 5px 10px 0;
   }
+  #credits {
+    font-size: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  .label {
+    font-size: 14px;
+    margin: 10px;
+  }
+
+  .controls-screen {
+    border-radius: 20px;
+    font-size: 25px;
+    color:  rgb(104, 248, 60);
+    padding: 3px;
+    font-family: 'VT323', monospace;
+    width: 30px;
+    padding: 2px;
+    margin: 5px;
+  }
+
+  .icons {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  
+#time-left {
+ 
+  width: 180px;
+  height: 35px;
+  margin: 10px;
+  border: 3px solid black;
+  font-size: 2.2rem;
+  font-family: 'VT323', monospace;
+}
+#buttons-container {
+  margin: 5px 5px 10px;
+}
+.buttons {
+  font-size: 30px;
+  margin: 5px;
+}
 }
